@@ -1,4 +1,3 @@
-# == Class: baseconfig
 class baseconfig {
   exec { 'apt-get update':
     command => '/usr/bin/apt-get update';

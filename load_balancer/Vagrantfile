@@ -3,18 +3,10 @@ Vagrant.configure("2") do |config|
   clienteUbuntu.vm.box = "bento/ubuntu-20.04"
   clienteUbuntu.vm.network :private_network, ip: "192.168.100.2"
   clienteUbuntu.vm.hostname = "clienteUbuntu"
-  clienteUbuntu.vm.provider :virtualbox do |vb|
-    vb.gui = true
-  end
   end
   config.vm.define :servidorUbuntu do |servidorUbuntu|
   servidorUbuntu.vm.box = "bento/ubuntu-20.04"
-  servidorUbuntu.vm.network :private_network, ip: "192.168.100.4"
-  servidorUbuntu.vm.provision "shell", path: "script.sh"
+  servidorUbuntu.vm.network :private_network, ip: "192.168.100.3"
   servidorUbuntu.vm.hostname = "servidorUbuntu"
-  servidorUbuntu.vm.synced_folder "www/", "/shared/"
-  servidorUbuntu.vm.provider :virtualbox do |vb|
-    vb.gui = true
-  end
   end
   end
