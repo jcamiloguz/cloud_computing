@@ -1,0 +1,40 @@
+config:
+  cluster.https_address: 192.168.100.2:8443
+  core.https_address: 192.168.100.2:8443
+  core.trust_password: true
+networks:
+- config:
+    bridge.mode: fan
+    fan.underlay_subnet: 10.0.2.0/24
+    ipv4.nat: "true"
+  description: ""
+  name: lxdfan0
+  type: bridge
+  project: default
+storage_pools:
+- config:
+    source: /var/snap/lxd/common/lxd/storage-pools/local
+  description: ""
+  name: local
+  driver: dir
+profiles:
+- config: {}
+  description: Default LXD profile
+  devices:
+    eth0:
+      name: eth0
+      network: lxdfan0
+      type: nic
+    root:
+      path: /
+      pool: local
+      type: disk
+  name: default
+projects:
+- config:
+    features.images: "true"
+    features.networks: "true"
+    features.profiles: "true"
+    features.storage.volumes: "true"
+  description: Default LXD project
+  name: default
