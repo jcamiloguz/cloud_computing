@@ -1,0 +1,1 @@
+{"virtualbox":{"/shared/":{"guestpath":"/shared","hostpath":"C:/Users/Jcami/Documents/uao/cloud_computing/firstReview/server_template","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Jcami/Documents/uao/cloud_computing/firstReview","disabled":false,"__vagrantfile":true}}}
