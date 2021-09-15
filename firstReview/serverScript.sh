@@ -12,6 +12,12 @@ sudo lxd init
 
 
 
+
+
+
+
+
+
 sudo lxc launch ubuntu:20.04 web
 # sudo lxc exec web --  echo nameserver 8.8.8.8 > /etc/resolv.conf
 sudo lxc exec web --  cat /etc/resolv.conf

@@ -1,0 +1,33 @@
+config: {}
+networks: []
+storage_pools: []
+profiles: []
+projects: []
+cluster:
+  server_name: backup1
+  enabled: true
+  member_config:
+  - entity: storage-pool
+    name: local
+    key: source
+    value: ""
+    description: '"source" property for storage pool "local"'
+  cluster_address: 192.168.100.2:8443
+  cluster_certificate: |
+    -----BEGIN CERTIFICATE-----
+    MIICFjCCAZygAwIBAgIRAJkvQlMAPhmp/Vn+SVmI/EcwCgYIKoZIzj0EAwMwOjEc
+    MBoGA1UEChMTbGludXhjb250YWluZXJzLm9yZzEaMBgGA1UEAwwRcm9vdEBsb2Fk
+    QmFsYW5jZXIwHhcNMjEwODMwMDMwMDMzWhcNMzEwODI4MDMwMDMzWjA6MRwwGgYD
+    VQQKExNsaW51eGNvbnRhaW5lcnMub3JnMRowGAYDVQQDDBFyb290QGxvYWRCYWxh
+    bmNlcjB2MBAGByqGSM49AgEGBSuBBAAiA2IABBJmFgWOXHqsd/0ogerOE1dDWoVi
+    0AsQVu78jsgkT6sHkVFJfwyFu677Xa94bthbSq/YBI9CDaapOP86v7ATVcEx++fp
+    bWtIYTPbG8E19WHkmhdV3EJgURp3lE7m3W00TKNmMGQwDgYDVR0PAQH/BAQDAgWg
+    MBMGA1UdJQQMMAoGCCsGAQUFBwMBMAwGA1UdEwEB/wQCMAAwLwYDVR0RBCgwJoIM
+    bG9hZEJhbGFuY2VyhwR/AAABhxAAAAAAAAAAAAAAAAAAAAABMAoGCCqGSM49BAMD
+    A2gAMGUCMGdBul1gYHB/WH8QRwobS/26sIrRSOUBl8BjQbcdLb2JX0B9CLBswPh2
+    sjL/EQhMhwIxAPT+7F4Tjy+ELZNuS3EqM0QA3v9U6nRwFCZa4K8y2Cy821ZxItuF
+    ez5lV2RdXM3qOw==
+    -----END CERTIFICATE-----
+  server_address: 192.168.100.5:8443
+  cluster_password: ""
+  cluster_certificate_path: ""
